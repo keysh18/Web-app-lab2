@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var word = new Array();
+			var count = 0;
+			function addLetter(x){
+				//alert("your mom");
+				for(let y = 0; y < word.length; y++){
+					//alert("your mom");
+					if(x == word[y]){
+						//alert("check");
+						alert("You have already used " + x);
+						//break;
+						return;
+					}
+					
+				}
+				document.getElementById(x).style.background='#13ae4b';
+				word[count] = x;
+				count+= 1;
+				//alert(count);
+				
+			}
+			function addWord(){
+				//alert("your mom");
+				//alert(word);
+				if (word != ""){
+					for (var x = 0; x < word.length; x++){
+						document.getElementById("wordBank").innerHTML += word[x];
+					}
+					document.getElementById("wordBank").innerHTML += ", ";
+					word = [];
+					count = 0;
+					document.getElementById("J").style.background='#efefef';
+					document.getElementById("U").style.background='#efefef';
+					document.getElementById("X").style.background='#efefef';
+					document.getElementById("T").style.background='#efefef';
+					document.getElementById("A").style.background='#efefef';
+					document.getElementById("P").style.background='#efefef';
+					document.getElementById("O").style.background='#efefef';
+					document.getElementById("S").style.background='#efefef';
+					document.getElementById("E").style.background='#efefef';
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<center>
+			<p><input type = "button" value = "J" id = "J" name = "J" onclick = "javascript:addLetter('J')"></button>
+			<input type = "button" value = "U" id = "U" name = "U" onclick = "javascript:addLetter('U')"></button>
+			<input type = "button" value = "X" id = "X" name = "X" onclick = "javascript:addLetter('X')"></button>
+			<input type = "button" value = "T" id = "T" name = "T" onclick = "javascript:addLetter('T')"></button>
+			<input type = "button" value = "A" id = "A" name = "A" onclick = "javascript:addLetter('A')"></button>
+			<input type = "button" value = "P" id = "P" name = "P" onclick = "javascript:addLetter('P')"></button>
+			<input type = "button" value = "O" id = "O" name = "O" onclick = "javascript:addLetter('O')"></button>
+			<input type = "button" value = "S" id = "S" name = "S" onclick = "javascript:addLetter('S')"></button>
+			<input type = "button" value = "E" id = "E" name = "E" onclick = "javascript:addLetter('E')"></button></p>
+			<p><input type = "button" value = "New Word" id = "newWord" name = "newWord" onclick = "javascript:addWord()"></button></p>
+			<p id = "wordBank"></p>
+		</center>
+	</body>
+</html>

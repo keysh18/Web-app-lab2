@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function evaluate(x){
+				var output = eval(x);
+				document.getElementById("answer").value += "=" + output;
+			}
+			function display(x){
+				if (x == "=")
+					evaluate(document.getElementById("answer").value);
+				else
+					document.getElementById("answer").value += x;
+			}
+			function clear1(){
+				document.getElementById("answer").value = " ";
+			}
+		</script>
+	</head>
+
+	<body>
+		<center><input type = "text" name = "answer" id = "answer"></td></center>
+		<table align="center">
+			<tr>
+				<td><input type = "button" value = "1" id = "1" name = "1" onclick = "javascript:display('1')"></button></td>
+				<td><input type = "button" value = "2" id = "2" name = "2" onclick = "javascript:display('2')"></button></td>
+				<td><input type = "button" value = "3" id = "3" name = "3" onclick = "javascript:display('3')"></button></td>
+				<td><input type = "button" value = "+" id = "+" name = "+" onclick = "javascript:display('+')"></button></td>
+			</tr>
+			<tr>
+				<td><input type = "button" value = "4" id = "4" name = "4" onclick = "javascript:display('4')"></button></td>
+				<td><input type = "button" value = "5" id = "5" name = "5" onclick = "javascript:display('5')"></button></td>
+				<td><input type = "button" value = "6" id = "6" name = "6" onclick = "javascript:display('6')"></button></td>
+				<td><input type = "button" value = "-" id = "-" name = "-" onclick = "javascript:display('-')"></button></td>
+			</tr>
+			<tr>
+				<td><input type = "button" value = "7" id = "7" name = "7" onclick = "javascript:display('7')"></button></td>
+				<td><input type = "button" value = "8" id = "8" name = "8" onclick = "javascript:display('8')"></button></td>
+				<td><input type = "button" value = "9" id = "9" name = "9" onclick = "javascript:display('9')"></button></td>
+				<td><input type = "button" value = "*" id = "*" name = "*" onclick = "javascript:display('*')"></button></td>
+			</tr>
+			<tr>
+				<td><input type = "button" value = "C" id = "C" name = "C" onclick = "javascript:clear1()"></button></td>
+				<td><input type = "button" value = "0" id = "0" name = "0" onclick = "javascript:display('0')"></button></td>
+				<td><input type = "button" value = "=" id = "=" name = "=" onclick = "javascript:display('=')"></button></td>
+				<td><input type = "button" value = "/" id = "/" name = "/" onclick = "javascript:display('/')"></button></td>
+			</tr>
+		</table>
+	</body>
+
+</html>
